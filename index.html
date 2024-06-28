@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Configura o arquivo CSS, o titulo e o icone da pagina -->
+  <title>JFI | Gerador de Assinaturas</title>
+  <link rel="stylesheet" type="text/css" href="index.css" />
+  <link rel="icon" href="./assets/imgs/favicon.png" type="image/png">
+</head>
+
+<body>
+  <!-- Cria um wrapper "app" -->
+  <div class="app">
+    <!-- Cria um wrapper "content" -->
+    <div class="content">
+      <!-- Cria um cabecalho com a logo e o nome/slogan -->
+      <div class="header">
+        <span>
+          <img src="./assets/imgs/Logo.png" class="assinaturaImagem"
+            style="max-width: 125px;">
+        </span>
+        <p class="h5">Gerador de assinatura eletrônica</p>
+      </div>
+
+      <div class="forms">
+        <!-- Cria um formulario para o usuario preencher -->
+        <form>
+          <!-- Cada campo e uma divisao com um texto (descricao) e uma entrada de texto <input> -->
+          <!-- Cada <input> recebe um id, que e usado no script para pegar o que o usuario digitou -->
+          <div class="form-input">
+            <p>Nome</p><input type="text" id="nome" class="input-text" placeholder="Insira o seu nome completo" maxlength="30">
+          </div>
+          <div class="form-input">
+            <!-- Nesse campo em especifico tem um <select> no lugar da <input> -->
+            <p>Cargo</p><input type="text" id="cargos" class="input-text" placeholder="Insira o seu cargo" maxlength="40">
+          </div>
+          <div class="form-input">
+            <p>Local</p>
+            <select id="local">
+               O value de cada uma das opcoes sera usado (ao inves do que o usuario digitou) 
+               <option value="" selected disabled style="text-align: center;">Selecione o seu estado de atuação</option>
+
+              <optgroup label="Estado de São Paulo">
+                <option value="Matriz Itapetininga - SP">Matriz Itapetininga - SP</option>
+                <option value="Filial Caçapava - SP">Filial Caçapava - SP</option>
+                <option value="Filial Capão Bonito - SP">Filial Capão Bonito - SP</option>
+                <option value="Filial Dourado - SP">Filial Dourado - SP</option>
+                <option value="Filial Duartina - SP">Filial Duartina - SP</option>
+                <option value="Filial Itararé - SP">Filial Itararé - SP</option>
+                <option value="Filial Itatinga - SP">Filial Itatinga - SP</option>
+                <option value="Filial Lençóis Paulista - SP">Filial Lençóis Paulista - SP</option>
+                <option value="Filial São Miguel Arcanjo - SP">Filial São Miguel Arcanjo - SP</option>
+                <option value="Filial Vale do Rio Pardo - SP">Filial Vale do Rio Pardo - SP</option>
+              </optgroup>
+
+              <optgroup label="Estado do Rio Grande do Sul">
+                <option value="Filial São Gabriel - RS">Filial São Gabriel - RS</option>
+              </optgroup>
+
+              <optgroup label="Estado do Paraná">
+                <option value="Filial Curiuva - PR">Filial Curiuva - PR</option>
+                <option value="Filial Ibaiti - PR">Filial Ibaiti - PR</option>
+                <option value="Filial Jaguariaiva - PR">Filial Jaguariaiva - PR</option>                
+              </optgroup>
+              
+              <optgroup label="Estado do Mato Grosso do Sul">
+                <option value="Filial Agua Clara - MS">Filial Agua Clara - MS</option>
+                <option value="Filial Camapuã - MS">Filial Camapuã - MS</option>
+                <option value="Filial Campo Grande - MS">Filial Campo Grande - MS</option>
+                <option value="Filial Três Lagoas - MS">Filial Três Lagoas - MS</option>                
+              </optgroup>
+            </select>
+          </div>
+          <div class="form-input">
+            <p>Celular</p><input type="tel" id="celular" class="input-text" placeholder="Insira o seu número corporativo">
+          </div>
+        </form>
+      </div>
+
+      <h4>Pré-visualização da assinatura</h4>
+      <center>
+        <div class="separador"></div>
+      </center>
+      <div class="assinatura-wrapper">
+        <!-- Cria a divisao que sera usada para copiar a assinatura -->
+        <div class="assinatura-div" id="assinatura-div">
+          <!-- Adiciona dentro dela uma tabela -->
+
+          <table id="tabelinha" style="border: 0; margin: 0; padding: 0; display: inline-table;" cellpadding="0" cellspacing="0">
+            <tr>
+              <td><img src="spacer.gif" width="298" height="10" alt=""></td>
+              <td><img src="spacer.gif" width="130" height="1" alt=""></td>
+              <td><img src="spacer.gif" width="1" height="1" alt=""></td>
+            </tr>
+            <tr>
+                
+              <td valign="middle" style="padding: 0px 250px 10px 0px;">
+                <img src="spacer.gif" width="1" height="10" alt="">
+                <h3 style="margin: 0px; font-size: 18px; white-space: nowrap;">
+                  <span id="nome-assinatura">Nome Completo</span>
+                </h3>
+                <p style="margin: 0px; font-size: 14px; line-height: 16px; white-space: nowrap;">
+                  <span id="cargo-assinatura">Cargo na empresa</span>
+                </p>
+                <p style="margin: 0px; font-size: 14px; line-height: 16px; white-space: nowrap;">
+                  <span id="local-assinatura">Local de atuação</span>
+                </p>
+                <a id="celular-assinatura" href="https://wa.me/5599999999999">
+                  <span id="celular-assinatura">99 99999 9999</span>
+                </a>
+              </td>
+              <td rowspan="6"><a href="https://jfi.com.br/"><img src="./assets/imgs/img-assinatura/Group 786.png" width="181" height="123" alt=""></td></a>
+              <td><img src="spacer.gif" width="1" height="74" alt=""></td>
+            </tr>
+            <tr>
+            <tr>
+                <td>
+                <a href="https://www.instagram.com/jfisilvicultura/"><img src="./assets/imgs/img-assinatura/insta.png" width="25" alt=""></a>
+                <a href="https://www.facebook.com/jfisilvicultura/?locale=pt_BR"><img src="./assets/imgs/img-assinatura/face.png" width="25" alt=""></a>
+                <a href="https://br.linkedin.com/company/jfisilvicultura"><img src="./assets/imgs/img-assinatura/linke.png" width="25" alt=""></a>
+                </td>
+                <td><img src="spacer.gif" width="1" height="1" alt=""></td>
+              </tr>
+          </table>
+        </div>
+      </div>
+      <!-- Cria divisao para o botao na parte de baixo -->
+      <div class="center-button">
+          <button class="Btn" type="submit" id="btn-copiar">
+            <span class="text">Copiar a assintura</span>
+            <span class="svgIcon">
+              <img style="height: 1em;" src="./assets/imgs/table.png" alt="">
+            </span>
+          </button>
+
+          <!-- Botão para abrir o modal com explicação de como inserir a assinatura dno e-mail -->
+          <button class="Btn2" type="submit" id="openModalBtn">
+            <span class="text2">Como usar no e-mail?</span>
+            <span class="svgIcon2">
+              <img style="height: 1.25em;" src="./assets/imgs/interrogacao.png" alt="">
+            </span>
+          </button>
+
+          <!-- Conteudo do modal -->
+          <div class="modal" id="myModal">
+            <div class="modal-content">
+              <span class="close">&times;</span>
+              <h4 style="margin-top: 20px;">Configurando assinatura no Outlook</h4>
+              <div class="separador-modal"></div>
+              <h5>Vá até o Outlook e clique em "Novo E-mail"</h5>
+              <img src="./assets/imgs/email1.png" alt="">
+              <h5>Em "Mensagem", clique em "Assinatura" > "Assinaturas..." conforme a imagem</h5>
+              <img src="./assets/imgs/email2.png" alt="">
+              <h5>Agora, siga os seguintes passos:</h5>
+              <ul class="lista-etapas">
+                <li><p>1 - Digite o seu nome > clique em Ok</p></li>
+                <li><p>2 - Pressione as teclas: CTRL + V</p></li>
+                <li><p>3 - Escolha seu nome Clique em "Ok"</p></li>
+              </ul>
+              <img src="./assets/imgs/email3.png" alt="">
+              <h5 style="margin-top: 10px;">Finalizado! As suas mensagens de e-mail já devem vir com a nova assinatura.</h5>
+
+              <div class="separador-modal"></div>
+              <div class="fechar-modal">
+                <button id="botao-fechar" class="botao-close">Fechar</button>
+              </div>
+            </div>
+          </div>
+        
+          <!-- Cria divisao para o rodape com as informacoes -->
+          <footer>
+            <a href="https://www.jfi.com.br" target="blank">
+              JFI Silvicultura <span><img src="./assets/imgs/R.png" alt=""></span> - Todos os Direitos Reservados - 2024
+            </a>
+          </footer>
+    </div>
+  </div>
+
+  <!-- Configura o script com o codigo -->
+  <script src="index.js"></script>
+</body>
+
+</html>
