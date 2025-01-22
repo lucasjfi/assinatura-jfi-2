@@ -32,9 +32,23 @@
           <div class="form-input">
             <p>Nome</p><input type="text" id="nome" class="input-text" placeholder="Insira o seu nome completo" maxlength="30">
           </div>
-          <div class="form-input">
-            <!-- Nesse campo em especifico tem um <select> no lugar da <input> -->
-            <p>Cargo</p><input type="text" id="cargos" class="input-text" placeholder="Insira o seu cargo" maxlength="40">
+          <div class="diferent-input">
+            <div class="form-input">
+              <p>Setor e Cargo</p>
+            </div>
+            <div class="form-group">
+              <!-- Nesse campo em especifico tem um <select> no lugar da <input> -->
+              
+              <select id="setor">
+                <option value="" disabled selected>Setor</option>
+                <option value="administrativo">Administrativo</option>
+                <option value="financeiro">Financeiro</option>
+                <option value="comercial">Comercial</option>
+                <option value="tecnico">Técnico</option>
+              </select>
+              <div class="divider"></div>
+              <input type="text" id="cargos" class="input-text" placeholder="Insira o seu cargo" maxlength="40">
+            </div>
           </div>
           <div class="form-input">
             <p>Local</p>
@@ -95,7 +109,7 @@
             </tr>
             <tr>
               <td rowspan="6"><a href="https://jfi.com.br/"><img src="./assets/imgs/Logo JFI Folha.png" width="65" alt=""></td></a>
-              <td valign="middle" style="padding: 0px 250px 10px 0px;">
+              <td valign="middle" style="padding: 0px 250px 0px 0px;">
                 <img src="spacer.gif" width="1" height="10" alt="">
                 <h3 style="margin: 0px; font-size: 18px; white-space: nowrap;">
                   <span id="nome-assinatura">Nome Completo</span>
@@ -118,7 +132,7 @@
                 <a href="https://www.facebook.com/jfisilvicultura/?locale=pt_BR"><img src="./assets/imgs/img-assinatura/face.png" width="25" alt=""></a>
                 <a href="https://br.linkedin.com/company/jfisilvicultura"><img src="./assets/imgs/img-assinatura/linke.png" width="25" alt=""></a>
                 </td>
-                <td><img src="spacer.gif" width="1" height="1" alt=""></td>
+                <!--<td><img src="spacer.gif" width=".5" height="10" alt=""></td>-->
               </tr>
           </table>
         </div>

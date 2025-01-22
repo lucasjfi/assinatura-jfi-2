@@ -141,6 +141,39 @@ button {
   transition: 500ms;
 }
 
+.form-group {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border: 1px solid #b1b1b1;
+  border-radius: 10px;
+  overflow: hidden;
+  width: 78%;
+  height: 40px;
+  margin: 0 auto;
+  box-sizing: border-box;
+  margin-top: 10px;
+  margin-bottom: 10px
+}
+
+.form-group select, .form-group input{
+  border: none;
+  outline: none;
+  font-size: 16px;
+  padding: 10px;
+  flex: 1px;
+}
+
+.form-group select{
+  background-color: #ececec;
+}
+
+.form-group .divider {
+  width: 1px;
+  background-color: #000;
+}
+
+
 /* Botao estilos gerais*/
 
 .center-button {
