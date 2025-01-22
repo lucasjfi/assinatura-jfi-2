@@ -27,9 +27,21 @@ span{
 
 body {
   font-family: 'Montserrat', Arial, sans-serif;
-  background: #ffffff;
+  background-image: url(https://jf134373.fluig.cloudtotvs.com.br:1500/volume/stream/Rmx1aWc=/P3Q9MSZ2b2w9RGVmYXVsdCZpZD05MDgxNiZ2ZXI9MTAwMCZmaWxlPTA4Yi5qcGcmY3JjPTMyOTQwMjA5NTQmc2l6ZT0wLjE3NDEzOSZ1SWQ9MTg0JmZTSWQ9MSZ1U0lkPTEmZD1mYWxzZSZ0a249JnB1YmxpY1VybD10cnVlJmF0dGFjaD1mYWxzZQ==.jpg);
   background-size: cover;
   background-repeat: no-repeat;
+}
+
+body::after{
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color:rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(5px);
+  z-index: -1;
 }
 
 .app {
@@ -56,20 +68,23 @@ body {
   font-weight: bold;
   margin: 0;
 }
+
 .header p{
   font-family: 'Kelson', Arial, sans-serif;
   font-size: 24px;
   font-weight: normal;
   margin-top: 4px;
+  color: #fff;
 }
 
 h4{
   font-family: 'Kelson', Arial, sans-serif;
   font-size: 16px;
-  margin-top: 0px;
+  margin-top: 20px;
   margin-bottom: 4px;
   display: flex;
   justify-content: center;
+  color: #fff;
 }
 
 /* Formulario */
@@ -94,6 +109,7 @@ h4{
 .form-input p {
   margin: 2px;
   font-weight: bolder;
+  color: #fff;
 }
 label {
   color: rgb(83, 83, 83);
@@ -144,7 +160,7 @@ button {
 .form-group {
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: center;
   border: 1px solid #b1b1b1;
   border-radius: 10px;
   overflow: hidden;
@@ -152,24 +168,28 @@ button {
   height: 40px;
   margin: 0 auto;
   box-sizing: border-box;
-  margin-top: 10px;
-  margin-bottom: 10px
 }
 
 .form-group select, .form-group input{
   border: none;
   outline: none;
-  font-size: 16px;
+  font-size: 13px;
   padding: 10px;
   flex: 1px;
 }
 
 .form-group select{
   background-color: #ececec;
+  border-radius: 10px 0px 0px 10px;
+}
+
+.form-group input{
+  background-color: #ffffff;
+  border-radius: 0px 10px 10px 0px;
 }
 
 .form-group .divider {
-  width: 1px;
+  width: 0px;
   background-color: #000;
 }
 
@@ -283,9 +303,13 @@ button {
   justify-content: center;
   width: 100%;
 }
+
 .assinatura-div {
-  padding: 5px;
+  margin-top: 10px;
+  padding: 12px;
   display: inline-block;
+  background-color: rgba(0, 0, 0, 0.25);
+  border-radius: 10px;
 }
 
 #nome-assinatura{
