@@ -314,18 +314,23 @@ button {
 
 #nome-assinatura{
   font-weight: bolder;
-  font-size: 16px;
+  font-size: 24px;
   color: #0a5853;
 }
 
-#cargo-assinatura, #local-assinatura, 
+#setor-cargo-assinatura, 
 #celular-assinatura{
-  font-size: 12px;
-  color: #696969;
+  font-size: 14px;
+  color: #5b5959;
   text-decoration: none;
 }
 
-#cargo-assinatura{
+#local-assinatura{
+  font-size: 14px;
+  color: #0a5853;
+}
+
+#setor-cargo-assinatura{
   font-weight: bolder;
 }
 

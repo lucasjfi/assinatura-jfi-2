@@ -8,6 +8,7 @@ const nomeInput = document.getElementById('nome');
 const localInput = document.getElementById('local');
 const celularInput = document.getElementById('celular');
 const cargosInput = document.getElementById('cargos');
+const setorInput = document.getElementById('setor');
 
 // adiciona um metodo que realiza uma funcao quando um eventoacontece
 // no caso o evento chama-se: "input" e ocorre quando o texto digitado se altera
@@ -16,12 +17,14 @@ nomeInput.addEventListener('input', () => btn('nomeInput'))
 localInput.addEventListener('input', () => btn('localInput'))
 celularInput.addEventListener('input', () => btn('celularInput'))
 cargosInput.addEventListener('input', () => btn('cargosInput'))
+setorInput.addEventListener('change', () => btn('cargosInput'))
 
 // encontra os campos a serem preenchidos na assinatura
 const nomeCompletoField = document.getElementById('nome-assinatura');
 const localField = document.getElementById('local-assinatura');
 const celularField = document.getElementById('celular-assinatura');
-const cargosField = document.getElementById('cargo-assinatura');
+const cargosField = document.getElementById('setor-cargo-assinatura');
+
 
 function btn(obj) {
   if(obj==='nomeInput'){
@@ -33,11 +36,27 @@ function btn(obj) {
     localField.innerHTML = local;
   }else if(obj === 'celularInput'){
     var celular = celularInput.value;
-    celularField.innerHTML = editaCelular(celular);
+    /*celularField.innerHTML = editaCelular(celular);*/
+    celularField.innerHTML = `Contato Corporativo: ${editaCelular(celular)}`
     celularField.setAttribute('href', `https://wa.me/55${editaCelular(celular).replace(/ /g, '')}`);
-  } else if (obj === 'cargosInput'){
+  } else if (obj === 'cargosInput' || obj === 'setorInput'){
     var cargo = cargosInput.value;
-    cargosField.innerHTML = editaCargo(cargo);
+    //var setor = document.getElementById('setor').value;
+    var setor = setorInput.value;
+
+    if(setor && cargo){
+      //cargosField.innerHTML = `${setor} - ${cargo}`;
+      document.getElementById('setor-cargo-assinatura').innerHTML = `${setor} - ${editaCargo(cargo)}`;
+    }else if(setor){
+      //cargosField.innerHTML = setor;
+      document.getElementById('setor-cargo-assinatura').innerHTML = setor;
+    } else if (cargo){
+      //cargosField.innerHTML = cargo;
+      document.getElementById('setor-cargo-assinatura').innerHTML = editaCargo(cargo)
+    } else{
+      //cargosField.innerHTML = '';
+      document.getElementById('setor-cargo-assinatura').innerHTML = '';
+    }
   }
 }
 
@@ -121,7 +140,7 @@ function editaCelular(cel) {
     } else {
       // se passar de 11, envie a mensagem de erro
       alert('Coloque o telefone no formato 12 12345 1234 (com 11 números)')
-      return '99 99999 9999'
+      return 'Contato Corporativo: 99 99999 9999'
     }
   } catch (err) { }
 }
