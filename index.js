@@ -34,12 +34,16 @@ function btn(obj) {
   }else if(obj === 'localInput'){
     var local = localInput.options[localInput.selectedIndex].value;
     localField.innerHTML = local;
-  }else if(obj === 'celularInput'){
+  }else if (obj === 'celularInput') {
     var celular = celularInput.value;
-    /*celularField.innerHTML = editaCelular(celular);*/
-    celularField.innerHTML = `Contato Corporativo: ${editaCelular(celular)}`
-    celularField.setAttribute('href', `https://wa.me/55${editaCelular(celular).replace(/ /g, '')}`);
-  } else if (obj === 'cargosInput' || obj === 'setorInput'){
+    if (celular.trim() === '') {
+        celularField.innerHTML = ''; 
+        celularField.removeAttribute('href');
+    } else {
+        celularField.innerHTML = `Contato Corporativo: ${editaCelular(celular)}`;
+        celularField.setAttribute('href', `https://wa.me/55${editaCelular(celular).replace(/ /g, '')}`);
+    }
+  }else if (obj === 'cargosInput' || obj === 'setorInput'){
     var cargo = cargosInput.value;
     //var setor = document.getElementById('setor').value;
     var setor = setorInput.value;
@@ -121,7 +125,7 @@ function editaCelular(cel) {
     // para facilitar a visualizacao esse processo e feito em partes:
     if (n === 0) {
       // se nao houver numero, retorna o padrao
-      return '99 99999 9999'
+      return ''
     } else if (n < 3) {
       // se for menor que 3, o usuario so digitou o DDD
       // portanto retorna o que ele digitou
