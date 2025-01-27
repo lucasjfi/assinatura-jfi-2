@@ -25,6 +25,12 @@ span{
   text-decoration: none;
 }
 
+html, body {
+  margin: 0px;
+  padding: 0px;
+  width: 100%;
+}
+
 body {
   font-family: 'Montserrat', Arial, sans-serif;
   background-image: url(https://jf134373.fluig.cloudtotvs.com.br:1500/volume/stream/Rmx1aWc=/P3Q9MSZ2b2w9RGVmYXVsdCZpZD05MDgxNiZ2ZXI9MTAwMCZmaWxlPTA4Yi5qcGcmY3JjPTMyOTQwMjA5NTQmc2l6ZT0wLjE3NDEzOSZ1SWQ9MTg0JmZTSWQ9MSZ1U0lkPTEmZD1mYWxzZSZ0a249JnB1YmxpY1VybD10cnVlJmF0dGFjaD1mYWxzZQ==.jpg);
@@ -436,6 +442,15 @@ footer img{
 
 .modal-content img{
   max-width: 65%;
+}
+
+@media(max-width: 1515px){
+  body{
+    background-image: url(https://jf134373.fluig.cloudtotvs.com.br:1500/volume/stream/Rmx1aWc=/P3Q9MSZ2b2w9RGVmYXVsdCZpZD05MDgxNiZ2ZXI9MTAwMCZmaWxlPTA4Yi5qcGcmY3JjPTMyOTQwMjA5NTQmc2l6ZT0wLjE3NDEzOSZ1SWQ9MTg0JmZTSWQ9MSZ1U0lkPTEmZD1mYWxzZSZ0a249JnB1YmxpY1VybD10cnVlJmF0dGFjaD1mYWxzZQ==.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center
+  };
 }
 
 @media (max-width: 800px) {
