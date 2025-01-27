@@ -444,13 +444,19 @@ footer img{
   max-width: 65%;
 }
 
-@media(max-width: 1515px){
-  body{
+@media(max-width: 1515px) {
+  html, body {
+    margin: 0; /* Remove margens */
+    padding: 0; /* Remove preenchimento */
+    height: 100%; /* Garante que o body ocupe toda a altura da tela */
+  }
+
+  body {
     background-image: url(https://jf134373.fluig.cloudtotvs.com.br:1500/volume/stream/Rmx1aWc=/P3Q9MSZ2b2w9RGVmYXVsdCZpZD05MDgxNiZ2ZXI9MTAwMCZmaWxlPTA4Yi5qcGcmY3JjPTMyOTQwMjA5NTQmc2l6ZT0wLjE3NDEzOSZ1SWQ9MTg0JmZTSWQ9MSZ1U0lkPTEmZD1mYWxzZSZ0a249JnB1YmxpY1VybD10cnVlJmF0dGFjaD1mYWxzZQ==.jpg);
     background-size: cover;
     background-repeat: no-repeat;
-    background-position: center
-  };
+    background-position: center;
+  }
 }
 
 @media (max-width: 800px) {
