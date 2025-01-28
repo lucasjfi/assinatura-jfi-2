@@ -40,7 +40,7 @@ function btn(obj) {
         celularField.innerHTML = ''; 
         celularField.removeAttribute('href');
     } else {
-        celularField.innerHTML = `Contato Corporativo: ${editaCelular(celular)}`;
+        celularField.innerHTML = `Contato: ${editaCelular(celular)}`;
         celularField.setAttribute('href', `https://wa.me/55${editaCelular(celular).replace(/ /g, '')}`);
     }
   }else if (obj === 'cargosInput' || obj === 'setorInput'){
@@ -144,7 +144,7 @@ function editaCelular(cel) {
     } else {
       // se passar de 11, envie a mensagem de erro
       alert('Coloque o telefone no formato 12 12345 1234 (com 11 números)')
-      return 'Contato Corporativo: 99 99999 9999'
+      return 'Contato: 99 99999 9999'
     }
   } catch (err) { }
 }

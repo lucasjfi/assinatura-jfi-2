@@ -320,7 +320,7 @@ button {
 
 #nome-assinatura{
   font-weight: bolder;
-  font-size: 24px;
+  font-size: 22px;
   color: #0a5853;
 }
 
@@ -342,7 +342,8 @@ button {
 
 #site-assinatura{
   font-size: 11.5px;
-  
+  color: #0a5853;
+  text-decoration: underline;
 }
 
 footer {
