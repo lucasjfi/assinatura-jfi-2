@@ -340,6 +340,11 @@ button {
   font-weight: bolder;
 }
 
+#site-assinatura{
+  font-size: 11.5px;
+  
+}
+
 footer {
   position: fixed;
   bottom: 0;
