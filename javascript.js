@@ -40,9 +40,17 @@ function btn(obj) {
         celularField.innerHTML = ''; 
         celularField.removeAttribute('href');
     } else {
-        celularField.innerHTML = `Contato: ${editaCelular(celular)}`;
-        celularField.setAttribute('href', `https://wa.me/55${editaCelular(celular).replace(/ /g, '')}`);
-    }
+      const numeroFormatado = editaCelular(celular);
+      
+      if (numeroFormatado) {
+          celularField.innerHTML = `Contato: ${numeroFormatado}`;
+          celularField.setAttribute('href', `https://wa.me/55${numeroFormatado.replace(/ /g, '')}`);
+      } else {
+          // Se o número não for válido, exiba uma mensagem padrão ou de erro
+          celularField.innerHTML = 'Número de contato inválido';
+          celularField.removeAttribute('href'); // Remove o link se o número não for válido
+      }
+  }
   }else if (obj === 'cargosInput' || obj === 'setorInput'){
     var cargo = cargosInput.value;
     //var setor = document.getElementById('setor').value;
@@ -115,38 +123,36 @@ function primeirasMaiusculas(palavra) {
 
 function editaCelular(cel) {
   try {
-    // retira todos os espacos e simbolos que o usuario possa ter digitado
+    // Retira todos os espaços e símbolos que o usuário possa ter digitado
     cel = cel.replace(/ /g, '');
     cel = cel.replace(/\(/g, '');
     cel = cel.replace(/\)/g, '');
     cel = cel.replace(/\-/g, '');
     let n = cel.length;
-    // retorna o celular no formato certo com espaçamentos
-    // para facilitar a visualizacao esse processo e feito em partes:
+
+    // Retorna o celular no formato certo com espaçamentos
     if (n === 0) {
-      // se nao houver numero, retorna o padrao
-      return ''
+      // Se não houver número, retorna o padrão
+      return '';
     } else if (n < 3) {
-      // se for menor que 3, o usuario so digitou o DDD
-      // portanto retorna o que ele digitou
-      return cel
-    } else if (n < 7) {
-      // se for menor que 7, o usuario so digitou o DDD e os 5 primeiros numeros
-      // portanto retorna o que ele digitou com o espaco depois do DDD
-      // ex: "14997..." -> "14 997..."
-      return cel.slice(0, 2) + ' ' + cel.slice(2)
-    } else if (n <= 11) {
-      // se for menor ou igual a 11
-      // o usuario so digitou o DDD e os 5 primeiros numeros e iniciou (ou completou) o resto
-      // portanto retorna o que ele digitou com o espaco depois do DDD e mais um espaço separando o umero em 2
-      // ex: "141234567..." -> "14 12345 67..."
-      return cel.slice(0, 2) + ' ' + cel.slice(2, 7) + ' ' + cel.slice(7)
+      // Se for menor que 3, o usuário só digitou o DDD
+      return cel;
+    } else if (n === 10) {
+      // Se o número tiver 10 dígitos (DDD + 8 dígitos)
+      // Formato: "14 9999 9999"
+      return cel.slice(0, 2) + ' ' + cel.slice(2, 6) + ' ' + cel.slice(6);
+    } else if (n === 11) {
+      // Se o número tiver 11 dígitos (DDD + 9 dígitos)
+      // Formato: "14 99999 9999"
+      return cel.slice(0, 2) + ' ' + cel.slice(2, 7) + ' ' + cel.slice(7);
     } else {
-      // se passar de 11, envie a mensagem de erro
-      alert('Coloque o telefone no formato 12 12345 1234 (com 11 números)')
-      return 'Contato: 99 99999 9999'
+      // Se passar de 11, retorna uma string vazia
+      return '';
     }
-  } catch (err) { }
+  } catch (err) {
+    console.error(err);
+    return 'Erro ao formatar o número';
+  }
 }
 
 function copiar() {
