@@ -450,7 +450,7 @@ footer img{
   max-width: 65%;
 }
 
-@media(max-width: 1515px) {
+@media(max-width: 1700px) {
   html, body {
     margin: 0; /* Remove margens */
     padding: 0; /* Remove preenchimento */
@@ -491,7 +491,7 @@ footer img{
   select {
     width: 100%;
   }
-  .form-input {
+  .form-input{
     display: block;
   }
   .form-input p {
@@ -501,5 +501,9 @@ footer img{
   }
   .assinatura-div {
     overflow: hidden;
+  }
+  .form-group{
+    margin: 0px;
+    width: 100%;
   }
 }
