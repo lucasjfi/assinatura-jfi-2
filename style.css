@@ -348,7 +348,7 @@ button {
 #site-assinatura{
   font-size: 12px;
   color: #0a5853;
-  text-decoration: underline;
+  /*text-decoration: underline;*/
 }
 
 footer {
