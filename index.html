@@ -39,26 +39,70 @@
                 <!-- Nesse campo em especifico tem um <select> no lugar da <input> -->
                 <!--Setores da empresa-->
                 <select id="setor">
-                  <option value="Setor" selected>Setor</option>
-                  <option value="Administrativo Operacional">Administrativo Operacional</option>
+                  <option value="" selected>Selecione o seu setor</option>
                   <option value="Controladoria">Controladoria</option>
                   <option value="Contábil | Fiscal">Contábil | Fiscal</option>
-                  <option value="Diretoria e Auditoria">Diretoria e Auditoria</option>
-                  <option value="Diretoria Executiva">Diretoria Executiva</option>
-                  <option value="Diretoria Operacional">Diretoria Operacional</option>
-                  <option value="Financas, Processos, Jurídico e Facilities">Finanças, Processos, Jurídico e Facilities</option>
+                  <option value="Recursos Humanos">Recursos Humanos</option>
+                  <option value="Tecnologia Da Informação">Tecnologia Da Informação</option>
+                  <option value="Ssma">SSMA</option>
+                  <option value="Suprimentos | Frotas">Suprimentos | Frotas</option>
+                  <option value="Suprimentos">Suprimentos</option>
                   <option value="Frotas">Frotas</option>
-                  <option value="Gestao Operacional">Gestão Operacional</option>
+                  <option value="Finanças, Jurídico, Processos E Facilities">Finanças, Jurídico, Processos E Facilities</option>
+                  <option value="Finanças">Finanças</option>
+                  <option value="Finanças E Seguros">Finanças E Seguros</option>
+                  <option value="Juridico">Juridico</option>
+                  <option value="Processos E Facilities">Processos E Facilities</option>
+                  <option value="Auditoria">Auditoria</option>
+                  <option value="Diretoria Executiva">Diretoria Executiva</option>
+                  <option value="Gestão Operacional">Gestão Operacional</option>
                   <option value="Manutenção">Manutenção</option>
                   <option value="Qualidade">Qualidade</option>
-                  <option value="Recursos Humanos">Recursos Humanos</option>
-                  <option value="SSMA">Saúde, Segurança e Meio Ambiente (SSMA)</option>
-                  <option value="Suprimentos">Suprimentos</option>
-                  <option value="Tecnologia da Informação">Tecnologia da Informação</option>
+                  <option value="Administrativo Operacional">Administrativo Operacional</option>
                   <option value="">Nenhum</option>
                 </select>
                 <div class="divider"></div>
-                <input type="text" id="cargos" class="input-text" placeholder="Insira o seu cargo" maxlength="40">
+                <!--<input type="text" id="cargos" class="input-text" placeholder="Insira o seu cargo" maxlength="40">-->
+
+                <select id="cargos" class="input-text">
+                  <option value="" selected>Selecione o seu cargo</option>
+                  <option value="Almoxarife II">Almoxarife II</option>
+                  <option value="Almoxarife III">Almoxarife III</option>
+                  <option value="Analista De Comunicação Pl">Analista De Comunicação Pl</option>
+                  <option value="Analista De Custos Jr">Analista De Custos Jr</option>
+                  <option value="Analista De Pcp Jr">Analista De Pcp Jr</option>
+                  <option value="Analista Jr">Analista Jr</option>
+                  <option value="Analista Pl">Analista Pl</option>
+                  <option value="Analista Sr">Analista Sr</option>
+                  <option value="Assistente">Assistente</option>
+                  <option value="Auxiliar">Auxiliar</option>
+                  <option value="Comprador Jr">Comprador Jr</option>
+                  <option value="Comprador Pl">Comprador Pl</option>
+                  <option value="Comprador Sr">Comprador Sr</option>
+                  <option value="Coordenador">Coordenador</option>
+                  <option value="Encarregado">Encarregado</option>
+                  <option value="Enfermeiro Do Trabalho(a)">Enfermeiro Do Trabalho(a)</option>
+                  <option value="Gerente Geral">Gerente Geral</option>
+                  <option value="Gerente Corporativo">Gerente Corporativo</option>
+                  <option value="Gestor Administrativo">Gestor Administrativo</option>
+                  <option value="Mecânico Lider">Mecânico Lider</option>
+                  <option value="Supervisor De Drone">Supervisor De Drone</option>
+                  <option value="Supervisor">Supervisor</option>
+                  <option value="Supervisora">Supervisora</option>
+                  <option value="Tec Seg Do Trabalho">Tec Seg Do Trabalho</option>
+                  <option value="Tec. Enfermagem Do Trabalho">Tec. Enfermagem Do Trabalho</option>
+                  <option value="Técnico De Desenvolvimento">Técnico De Desenvolvimento</option>
+                  <option value="Jovem Aprendiz">Jovem Aprendiz</option>
+                  <option value="Estagiário(a)">Estagiário(a)</option>
+                  <option value="Gerente Regional">Gerente Regional</option>
+                  <option value="Gerente">Gerente</option>
+                  <option value="Analista De Processos Gerenciais Jr">Analista De Processos Gerenciais Jr</option>
+                  <option value="Analista De Processos Gerenciais Pl">Analista De Processos Gerenciais Pl</option>
+                  <option value="Assistente De Custo">Assistente De Custo</option>
+                  <option value="Diretor De Operações">Diretor De Operações</option>
+                  <option value="Especialista Em Processos">Especialista Em Processos</option>
+                  <option value="Auditor Interno">Auditor Interno</option>
+              </select>
               </div>
             </div>
           </div>
@@ -153,10 +197,10 @@
                     </a>
                   </p>
                   <div style="margin-top: 5px;">
-                    <a style="margin-right: 5px; text-decoration: none;" href="https://www.instagram.com/jfisilvicultura/"> 
+                    <a style="margin-right: 2px; text-decoration: none;" href="https://www.instagram.com/jfisilvicultura/"> 
                       <img src="./assets/imgs/Instagram icon.png" width="25" alt="Instagram" />
                     </a> 
-                    <a style="margin-right: 5px; text-decoration: none;" href="https://www.facebook.com/jfisilvicultura/?locale=pt_BR"> 
+                    <a style="margin-right: 2px; text-decoration: none;" href="https://www.facebook.com/jfisilvicultura/?locale=pt_BR"> 
                       <img src="./assets/imgs/Facebook icon.png" width="25" alt="Facebook" />
                     </a> 
                     <a style="text-decoration: none;" href="https://br.linkedin.com/company/jfisilvicultura"> 
